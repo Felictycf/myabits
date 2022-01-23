@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/hj_db02?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: hujian
+
+#mybatis-plus:
+  #mapper-locations: com/example/ssmpdemo/mapper
+

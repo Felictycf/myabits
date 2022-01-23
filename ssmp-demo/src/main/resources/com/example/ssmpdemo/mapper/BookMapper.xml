@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--for interface mapper file -->
+<mapper namespace="com.example.ssmpdemo.mapper.BookMapper">
+    <resultMap id="bookmap" type="com/example/ssmpdemo/pojo/Book.java">
+        <id column="id" property="id" />
+        <result  column="NAME" property="name" />
+        <result  column="age" property="age" />
+        <result  column="birthDate" property="birthdate" />
+    </resultMap>
+    <delete id="delect"></delete>
+    <select id="select" resultType="com.example.ssmpdemo.pojo.Book" resultMap="bookmap">
+
+    select * from book where id= #{id};
+
+    </select>
+</mapper>
